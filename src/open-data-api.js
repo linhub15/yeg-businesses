@@ -1,13 +1,11 @@
-export class businessApi {
+export class Business {
   constructor() {
     this.apiEndpoint = 'https://data.edmonton.ca/resource/3trf-izgx.json' + '?';
   }
-
   async single(externalId) {
     let apiQuery = this.apiEndpoint + `externalid=${externalId}`;
     return await fetch(apiQuery).then(res => { return res.json();})
   }
-
   async listCategories() {
     let apiQuery = this.apiEndpoint + `$select=business_category,count(*)&$group=business_category`;
     return await fetch(apiQuery).then(res => { return res.json();})
@@ -21,4 +19,3 @@ export class businessApi {
     return await fetch(apiQuery).then(res => { return res.json();})
   }
 }
-
