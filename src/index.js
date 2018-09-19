@@ -1,4 +1,4 @@
-import { el } from './app-components.js'
+import { el } from './core.js'
 import { Business } from './open-data-api.js'
 const api = new Business();
 

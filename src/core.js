@@ -11,5 +11,8 @@ function el(tag, attrs, ...children) {
   }
   return element;
 }
+function makeRoute(controller, param,value) {
+  return `/${controller}?${param}=${value}`;
+}
 
-export {el};
+export {el, makeRoute};
