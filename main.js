@@ -1,4 +1,4 @@
-import { el } from './dom.js'
+import { el } from './dom-api.js'
 
 const countBusinessByCategory = 'https://data.edmonton.ca/resource/3trf-izgx.json?$select=business_category,count(*)&$group=business_category';
 
