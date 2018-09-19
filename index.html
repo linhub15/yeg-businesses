@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,29 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Edmonton Businesses</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script type="module" src="main.js"></script>
-    <script type="module" src="dom.js"></script>
-    <style>
-        .card-deck {
-            max-width: 45rem;
-            margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .card {
-            align-content: center;
-            text-align: center;
-            background-color: #efefef;
-            height: 100px;
-            width: 15rem;
-        }
-
-    </style>
+    {% include inline-styles.html %}
 </head>
 <body>
     <div id="byCategory">
         <h2>Edmonton Businesses Categories</h2>
     </div>
+    <script type="module" src="/src/main.js"></script>
 </body>
 </html>
