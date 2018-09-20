@@ -1,6 +1,10 @@
 url: ""
 plugins:
 
+exclude:
+  - Gemfile.lock
+  - Gemfile
+
 defaults:
   -
     scope:
