@@ -2,9 +2,8 @@ import { el, makeRoute } from './core.js'
 import { Business } from './open-data-api.js'
 const api = new Business();
 
-function init() {
-    api.listCategories()
-        .then(r => displayCategories('#index', r));
+async function init() {
+    displayCategories('#index', await api.listCategories());
 }
 
 function displayCategories(selector, categories) {

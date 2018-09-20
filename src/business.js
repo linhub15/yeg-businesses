@@ -2,12 +2,9 @@ import { el } from './core.js'
 import { Business } from './open-data-api.js'
 const api = new Business();
 
-function init() {
+async function init() {
     let id = new URLSearchParams(window.location.search).get('id');
-    api.single(id).then(r => {
-        console.log(r[0]);
-        displayBusiness('#business', r[0]);
-    });
+    displayBusiness('#business', await api.single(id));
 }
 
 function displayBusiness(selector, business) {
