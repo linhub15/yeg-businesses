@@ -4,7 +4,7 @@ const api = new Business();
 
 function init() {
     api.listCategories()
-        .then(r => displayCategories('#search', r));
+        .then(r => displayCategories('#index', r));
 }
 
 function displayCategories(selector, categories) {
