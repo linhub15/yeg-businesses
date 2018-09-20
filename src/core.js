@@ -11,8 +11,7 @@ function el(tag, attrs, ...children) {
   }
   return element;
 }
-function makeRoute(controller, param,value) {
-  return `/${controller}?${param}=${value}`;
+function makeRoute(controller, param, value) {
+  return param && value ? `/${controller}?${param}=${value}` : `/${controller}`;
 }
-
 export {el, makeRoute};

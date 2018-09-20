@@ -1,4 +1,4 @@
-import { el } from './core.js';
+import { el, makeRoute } from './core.js';
 import { Business } from './open-data-api.js';
 const api = new Business();
 
@@ -9,7 +9,7 @@ function init() {
 
     let resultPromise = category
         ? api.businessesByCategory(category)
-        : api.businessesByName(q);  //If param not category, param must be q
+        : api.businessesByName(q);  //If param not category, assume param == q
 
     resultPromise.then(r => displayBusineses('#results',r));
 }
@@ -17,7 +17,7 @@ function init() {
 function displayBusineses(selector, data) {
     let row = el('div', {class: 'row'});
     for (let item of data) {
-        row.appendChild(el('div', {class: 'list-item'}, item.trade_name));
+        row.appendChild(el('a', {class: 'list-item', href: makeRoute('business','id',item.externalid)}, item.trade_name));
     }
     let list = el('div', {class: 'list'}, row);
     document.querySelector(selector).appendChild(list);
