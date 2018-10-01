@@ -9,15 +9,16 @@ async function init(params) {
     let q = params.get('q');
     displayBusineses('#results', category
         ? await api.businessesByCategory(category)
-        : await api.businessesByName(q)); //If param not category, assume param == q
+        : await api.businessesByName(q));
 }
 
 function displayBusineses(selector, data) {
     let row = el('div', {class: 'row'});
     for (let item of data) {
-        row.appendChild(el('a', 
-        {   class: 'list-item', 
-            href: makeRoute('business','id',item.externalid)}, item.trade_name));
+        row.appendChild(el('a'
+        ,{ class: 'list-item'
+            ,href: makeRoute('business','id',item.externalid)}
+        ,item.trade_name));
     }
     let list = el('div', {class: 'list'}, row);
     document.querySelector(selector).appendChild(list);
