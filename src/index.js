@@ -26,6 +26,7 @@ function displayCategories(selector, categories) {
             el('div',{"class":"category"}, c.business_category));
         categoryCards.appendChild(card);
     }
+    document.querySelector(selector).appendChild(el('h2',null,'Categories'));
     document.querySelector(selector).appendChild(categoryCards);
 }
 init();
