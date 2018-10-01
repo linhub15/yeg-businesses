@@ -1,3 +1,12 @@
+$primary-color: #236790;
+
+body {
+    font-family: sans-serif;
+}
+.page-title {
+    text-align: center;
+}
+
 .card-deck {
     max-width: 45rem;
     margin: 0 auto;
@@ -13,8 +22,60 @@
     width: 15rem;
 }
 
+.list {
+    width: 100%;
+    max-width: 45rem;
+    margin: 0 auto;
+}
 .list-item {
     display: block;
-    width: 400px;
-    margin: 0 auto;
+    height: 2em;
+    line-height: 2em;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 0 0 1px rgba(100, 100, 100, 0.3);
+    &:hover {
+        box-shadow: 1px 1px 5px 2px rgba(100, 100, 100, 0.7);
+        border: none;
+    }
+}
+
+.search-box {
+    $b-radius: 25px;
+    width: 100%;
+    max-width: 45rem;
+    margin: 40px auto;
+    box-shadow: 1px 2px 25px 0 #777;
+    border-radius: $b-radius;
+    display: flex;
+    flex: 1;
+
+    input[type="search"] {
+        width: 100%;
+        font-size: 1.7em;
+        border: none;
+        padding: 0 20px;
+        border-top-left-radius: $b-radius;
+        border-bottom-left-radius: $b-radius;
+        &:focus{
+            outline: none;
+        }
+    }
+    input[type="button"] {
+        width: 150px;
+        padding: 10px;
+        border: none;
+        outline: none;
+        color: white;
+        background-color: $primary-color;
+        border-top-right-radius: $b-radius;
+        border-bottom-right-radius: $b-radius;
+        font-size: 1.5em;
+        &:hover {
+            background-color: lighten($primary-color, 10%)
+        }
+        &:active {
+            background-color: darken($primary-color, 10%);   
+        }
+    }
 }
