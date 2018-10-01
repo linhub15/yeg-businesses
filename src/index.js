@@ -3,7 +3,19 @@ import { Business } from './open-data-api.js'
 const api = new Business();
 
 async function init() {
+    document.querySelector('#businessSearch')
+        .addEventListener('click', businessSearch);
+    document.querySelector('#businessQueryString').addEventListener('keyup', (event) => {
+        if (event.keyCode === 13) {
+            document.querySelector('#businessSearch').click();
+        }
+    })
     displayCategories('#index', await api.listCategories());
+}
+
+function businessSearch() {
+    let searchValue = document.querySelector('#businessQueryString').value;
+    window.location.assign(makeRoute('results','q',searchValue));
 }
 
 function displayCategories(selector, categories) {

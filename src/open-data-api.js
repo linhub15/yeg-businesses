@@ -21,7 +21,7 @@ export class Business {
         .then(res => { return res.json(); })
   }
   async businessesByName(tradeName) {
-    let url = this.apiEndpoint + `$where=trade_name like '${tradeName}%25'`;
+    let url = this.apiEndpoint + `$q=${tradeName}`;
     return await fetch(url)
         .then(res => { return res.json() })
   }
