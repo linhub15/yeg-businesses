@@ -1,6 +1,6 @@
 export class Business {
   constructor() {
-    this.apiEndpoint = 'https://data.edmonton.ca/resource/3trf-izgx.json?';
+    this.apiEndpoint = 'https://data.edmonton.ca/resource/qhi4-bdpu.json?';
   }
   async single(externalId) {
     let url = this.apiEndpoint + `externalid=${externalId}`;
