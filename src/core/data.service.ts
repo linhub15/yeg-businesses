@@ -13,7 +13,7 @@ interface Business {
 
 export class DataService {
 
-  async fetchBusinesses(): Promise<Business> {
+  async fetchBusinesses(): Promise<Business[]> {
     const url = 'https://data.edmonton.ca/resource/3trf-izgx.json';
     return await fetch(url).then(response => { return response.json(); });
   }
