@@ -11,10 +11,19 @@ interface Business {
   ward: string
 }
 
+interface BusinessCategory {
+  business_category: string,
+  count: string | number
+}
 export class DataService {
 
   async fetchBusinesses(): Promise<Business[]> {
     const url = 'https://data.edmonton.ca/resource/3trf-izgx.json';
+    return await fetch(url).then(response => { return response.json(); });
+  }
+
+  async fetchBusinessCategories(): Promise<BusinessCategory[]> {
+    const url = 'https://data.edmonton.ca/resource/3trf-izgx.json?$select=business_category,count(*)&$group=business_category';
     return await fetch(url).then(response => { return response.json(); });
   }
 
