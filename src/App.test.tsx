@@ -26,3 +26,8 @@ it('added Hubert was here', () => {
   const p = container.querySelector('#hubert');
   expect(p.textContent).toBe('Hubert');
 });
+
+it('added Ian was here', () => {
+ const p = container.querySelector('#ian');
+ expect(p.textContent).toBe('Ian'); 
+})
