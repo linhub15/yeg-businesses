@@ -1,4 +1,4 @@
-interface Business {
+export interface Business {
   business_category: string,
   count: string | number,
   date_of_issue: string | Date,
@@ -25,6 +25,11 @@ export class DataService {
   async fetchBusinessCategories(): Promise<BusinessCategory[]> {
     const url = 'https://data.edmonton.ca/resource/3trf-izgx.json?$select=business_category,count(*)&$group=business_category';
     return await fetch(url).then(response => { return response.json(); });
+  }
+
+  async fetchBusiness(id: string): Promise<Business> {
+    const url = `https://data.edmonton.ca/resource/3trf-izgx.json?externalid=${id}`;
+    return await fetch(url).then(response => { return response.json(); })
   }
 
 }

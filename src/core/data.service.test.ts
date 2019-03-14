@@ -1,4 +1,4 @@
-import { DataService } from './data.service';
+import { Business, DataService } from './data.service';
 
 
 describe('DataService', () => {
@@ -28,6 +28,13 @@ describe('DataService', () => {
     });
 
   });
+
+  describe('fetch business by id', () => {
+    it('returns a single business', async () => {
+      const business = await dataService.fetchBusiness('295961277-002')
+        .then( (result: Business) => { return result; });
+    })
+  })
 });
 
 
