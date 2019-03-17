@@ -9,7 +9,7 @@ it('renders without crashing', () => {
 });
 
 
-let container;
+let container: HTMLDivElement;
 
 beforeEach(() => {
   container = document.createElement('div');
@@ -18,12 +18,11 @@ beforeEach(() => {
 });
 
 afterEach(() => {
-  document.body.removeChild(container);
-  container = null;
+  document.body.removeChild<HTMLDivElement>(container);
 });
 
 it('added Hubert was here', () => {
-  const p = container.querySelector('#hubert');
+  const p = container.querySelector('#hubert') as HTMLParagraphElement;
   expect(p.textContent).toBe('Hubert');
 });
 
