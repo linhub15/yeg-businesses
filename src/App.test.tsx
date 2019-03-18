@@ -8,7 +8,12 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
+<<<<<<< HEAD
 let container;
+=======
+
+let container: HTMLDivElement;
+>>>>>>> 4625637e6d668b94160544179d8f9fea09c1630a
 
 beforeEach(() => {
   container = document.createElement('div');
@@ -17,12 +22,11 @@ beforeEach(() => {
 });
 
 afterEach(() => {
-  document.body.removeChild(container);
-  container = null;
+  document.body.removeChild<HTMLDivElement>(container);
 });
 
 it('added Hubert was here', () => {
-  const p = container.querySelector('#hubert');
+  const p = container.querySelector('#hubert') as HTMLParagraphElement;
   expect(p.textContent).toBe('Hubert');
 });
 
