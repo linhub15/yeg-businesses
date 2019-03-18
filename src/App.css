@@ -31,3 +31,21 @@
     transform: rotate(360deg);
   }
 }
+
+.category-container{
+  min-width: 200px;
+  max-width: 200px;
+  min-height: 150px;
+  max-height: 150px;
+  display: inline-block;
+  margin: 25px 25px;
+  vertical-align: middle;
+  border: 1px solid black;
+}
+
+.category{
+  text-align:center;
+  vertical-align: middle;
+  font-size: 10px;
+  line-height:150px;
+}
