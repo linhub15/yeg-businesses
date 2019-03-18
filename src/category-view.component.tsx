@@ -19,7 +19,7 @@ class Category extends React.Component<any, any>{
         console.log("Business Category: " + i);
     }
 
-    async componentDidMount() {
+    async componentDidNMount() {
         const businessServiceData = new DataService();
         const businessCategories = await businessServiceData.fetchBusinessCategories();
         this.setState({items: businessCategories});
