@@ -11,7 +11,7 @@ export interface Business {
   ward: string
 }
 
-interface BusinessCategory {
+export interface BusinessCategory {
   business_category: string,
   count: string | number
 }
