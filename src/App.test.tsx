@@ -8,12 +8,8 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-<<<<<<< HEAD
-let container;
-=======
-
 let container: HTMLDivElement;
->>>>>>> 4625637e6d668b94160544179d8f9fea09c1630a
+
 
 beforeEach(() => {
   container = document.createElement('div');
