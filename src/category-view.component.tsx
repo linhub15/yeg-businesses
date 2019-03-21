@@ -15,8 +15,8 @@ class Category extends React.Component<any, any>{
         };
     }
 
-    ShowBusinesses = (i: String) => {
-        console.log("Business Category: " + i);
+    showBusinesses = (business_category: String) => {
+        console.log("Business Category: " + business_category);
     }
 
     async componentDidMount() {
@@ -35,7 +35,7 @@ class Category extends React.Component<any, any>{
         else{
             return(
                 items.map((item:any) => 
-                    <div key={item.business_category} className="category-container" onClick={() => this.ShowBusinesses(item.business_category)}>
+                    <div key={item.business_category} className="category-container" onClick={() => this.showBusinesses(item.business_category)}>
                         <div className="category">
                             {item.business_category}
                         </div>
