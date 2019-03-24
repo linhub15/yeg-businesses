@@ -20,16 +20,7 @@ import { URLSearchParams } from 'url';
 const _queryString = require('query-string');
 
 const _parsed = _queryString.parse(location.search)
-const _id = _parsed.id;
-
-const styles = {
-  card: {
-    maxWidth: 345,
-  },
-  media: {
-    height: 140,
-  },
-};
+const _id = _parsed.id != null ? _parsed.id : "7267742-001";
 
 //reference: https://material-ui.com/demos/cards/
 class BusinessDetail extends React.Component<any, any>{
