@@ -16,13 +16,16 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { URLSearchParams } from 'url';
 
-//reference: https://www.npmjs.com/package/query-string
+// reference: https://www.npmjs.com/package/query-string
 const _queryString = require('query-string');
 
 const _parsed = _queryString.parse(location.search)
+
+// added a ternary conditional operator, so it it will show business: 7267742-001 as default
+// this will change in the future once we have the empty component setup.
 const _id = _parsed.id != null ? _parsed.id : "7267742-001";
 
-//reference: https://material-ui.com/demos/cards/
+// reference: https://material-ui.com/demos/cards/
 class BusinessDetail extends React.Component<any, any>{
     constructor(props: any){
         super(props);
