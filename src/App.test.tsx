@@ -26,6 +26,6 @@ it("added Hubert was here", () => {
 });
 
 it("added Ian was here", () => {
-  const p = container.querySelector("#ian");
+  const p = container.querySelector("#ian") as HTMLParagraphElement;
   expect(p.textContent).toBe("Ian");
 });
