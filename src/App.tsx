@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import './App.css';
-import Home from './components/home.component';
+import "./App.css";
+import Home from "./components/home.component";
+import Category from "./components/category-view.component";
 
 class App extends Component {
   render() {
@@ -17,8 +18,8 @@ class App extends Component {
 
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route exact path="/categories" component={Category} />
           </Switch>
-
         </div>
       </Router>
     );
