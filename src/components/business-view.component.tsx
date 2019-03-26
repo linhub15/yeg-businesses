@@ -69,102 +69,52 @@ class BusinessDetail extends Component<any, any> {
             Business Map Placeholder
           </Typography>
 
-          <Typography
-            component="span"
-            style={businessDetailStyle}
-            align="left"
-            className="business-detail-container"
-          >
+          <Typography component="span" style={businessDetailStyle} align="left">
             <span className="business-detail-label">Business Category: </span>
             <span>{item.business_category}</span>
           </Typography>
 
-          <Typography
-            component="span"
-            style={businessDetailStyle}
-            align="left"
-            className="business-detail-container"
-          >
+          <Typography component="span" style={businessDetailStyle} align="left">
             <span className="business-detail-label">Address: </span>
             <span>{item.address}</span>
           </Typography>
 
-          <Typography
-            component="span"
-            style={businessDetailStyle}
-            align="left"
-            className="business-detail-container"
-          >
+          <Typography component="span" style={businessDetailStyle} align="left">
             <span className="business-detail-label">Address: </span>
             <span>{item.address}</span>
           </Typography>
 
-          <Typography
-            component="span"
-            style={businessDetailStyle}
-            align="left"
-            className="business-detail-container"
-          >
+          <Typography component="span" style={businessDetailStyle} align="left">
             <span className="business-detail-label">Neighbourhood ID: </span>
             <span>{item.neighbourhood_id}</span>
           </Typography>
 
-          <Typography
-            component="span"
-            style={businessDetailStyle}
-            align="left"
-            className="business-detail-container"
-          >
+          <Typography component="span" style={businessDetailStyle} align="left">
             <span className="business-detail-label">Expiry Date: </span>
             <span>{item.expiry_date}</span>
           </Typography>
 
-          <Typography
-            component="span"
-            style={businessDetailStyle}
-            align="left"
-            className="business-detail-container"
-          >
+          <Typography component="span" style={businessDetailStyle} align="left">
             <span className="business-detail-label">Improvement Area: </span>
             <span>{item.business_improvement_area}</span>
           </Typography>
 
-          <Typography
-            component="span"
-            style={businessDetailStyle}
-            align="left"
-            className="business-detail-container"
-          >
+          <Typography component="span" style={businessDetailStyle} align="left">
             <span className="business-detail-label">Ward: </span>
             <span>{item.ward}</span>
           </Typography>
 
-          <Typography
-            component="span"
-            style={businessDetailStyle}
-            align="left"
-            className="business-detail-container"
-          >
+          <Typography component="span" style={businessDetailStyle} align="left">
             <span className="business-detail-label">Trade Name: </span>
             <span>{item.trade_name}</span>
           </Typography>
 
-          <Typography
-            component="span"
-            style={businessDetailStyle}
-            align="left"
-            className="business-detail-container"
-          >
+          <Typography component="span" style={businessDetailStyle} align="left">
             <span className="business-detail-label">Date Of Issue: </span>
             <span>{item.date_of_issue}</span>
           </Typography>
 
-          <Typography
-            component="span"
-            style={businessDetailStyle}
-            align="left"
-            className="business-detail-container"
-          >
+          <Typography component="span" style={businessDetailStyle} align="left">
             <span className="business-detail-label">Neighbourhood: </span>
             <span>{item.neighbourhood}</span>
           </Typography>
