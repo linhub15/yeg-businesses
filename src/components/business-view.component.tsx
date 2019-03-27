@@ -28,23 +28,23 @@ const _id = _parsed.id != null ? _parsed.id : "7267742-001";
 
 // reference: https://material-ui.com/demos/cards/
 class BusinessDetail extends React.Component<any, any>{
-    constructor(props: any){
-        super(props);
-        this.state = {
-            error: null,
-            isLoaded: true,
-            items: []
-        };
-    }
-
-    async componentDidMount() {
-      const businessServiceData = new DataService();
-      const businessDetails = await businessServiceData.fetchBusiness(_id);
-      this.setState({items: businessDetails});
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      error: null,
+      isLoaded: true,
+      items: []
+    };
   }
 
-  render(){
-    const {error, isLoaded, items} = this.state;
+  async componentDidMount() {
+    const businessServiceData = new DataService();
+    const businessDetails = await businessServiceData.fetchBusiness(_id);
+    this.setState({ items: businessDetails });
+  }
+
+  render() {
+    const { error, isLoaded, items } = this.state;
 
     // inline styles
     const businessMapStyle = {
@@ -55,72 +55,73 @@ class BusinessDetail extends React.Component<any, any>{
     }
 
     const businessDetailStyle = {
-        width: "48%",
-        display: "inline-block",
-        padding: "10px 0"
+      width: "48%",
+      display: "inline-block",
+      padding: "10px 0"
     }
 
-    return(
-      items.map((item:any) => 
-            <div className="business-container" key={_id}>
-              <Paper elevation={3} className="paper-container">
-                <Typography component="div" style={businessMapStyle} className="App business-map">
-                  Business Map Placeholder
+    return (
+      items.map((item: any) =>
+        <div className="business-container" key={_id}>
+          <Paper elevation={3} className="paper-container">
+            <Typography component="div" style={businessMapStyle} className="App business-map">
+              Business Map Placeholder
                 </Typography>
 
-                <Typography component="span" style={businessDetailStyle} align="left" className="business-detail-container">
-                    <span className="business-detail-label">Business Category: </span>
-                    <span>{item.business_category}</span>
-                </Typography>
+            <Typography component="span" style={businessDetailStyle} align="left" className="business-detail-container">
+              <span className="business-detail-label">Business Category: </span>
+              <span>{item.business_category}</span>
+            </Typography>
 
-                <Typography component="span" style={businessDetailStyle} align="left" className="business-detail-container">
-                  <span className="business-detail-label">Address: </span>
-                  <span>{item.address}</span>
-                </Typography>
+            <Typography component="span" style={businessDetailStyle} align="left" className="business-detail-container">
+              <span className="business-detail-label">Address: </span>
+              <span>{item.address}</span>
+            </Typography>
 
-                <Typography component="span" style={businessDetailStyle} align="left" className="business-detail-container">
-                  <span className="business-detail-label">Address: </span>
-                  <span>{item.address}</span>
-                </Typography>
+            <Typography component="span" style={businessDetailStyle} align="left" className="business-detail-container">
+              <span className="business-detail-label">Address: </span>
+              <span>{item.address}</span>
+            </Typography>
 
-                <Typography component="span" style={businessDetailStyle} align="left" className="business-detail-container">
-                  <span className="business-detail-label">Neighbourhood ID: </span>
-                  <span>{item.neighbourhood_id}</span>
-                </Typography>
+            <Typography component="span" style={businessDetailStyle} align="left" className="business-detail-container">
+              <span className="business-detail-label">Neighbourhood ID: </span>
+              <span>{item.neighbourhood_id}</span>
+            </Typography>
 
-                <Typography component="span" style={businessDetailStyle} align="left" className="business-detail-container">
-                  <span className="business-detail-label">Expiry Date: </span>
-                  <span>{item.expiry_date}</span>
-                </Typography>
+            <Typography component="span" style={businessDetailStyle} align="left" className="business-detail-container">
+              <span className="business-detail-label">Expiry Date: </span>
+              <span>{item.expiry_date}</span>
+            </Typography>
 
-                <Typography component="span" style={businessDetailStyle} align="left" className="business-detail-container">
-                  <span className="business-detail-label">Improvement Area: </span>
-                  <span>{item.business_improvement_area}</span>
-                </Typography>
+            <Typography component="span" style={businessDetailStyle} align="left" className="business-detail-container">
+              <span className="business-detail-label">Improvement Area: </span>
+              <span>{item.business_improvement_area}</span>
+            </Typography>
 
-                <Typography component="span" style={businessDetailStyle} align="left" className="business-detail-container">
-                  <span className="business-detail-label">Ward: </span>
-                  <span>{item.ward}</span>
-                </Typography>
+            <Typography component="span" style={businessDetailStyle} align="left" className="business-detail-container">
+              <span className="business-detail-label">Ward: </span>
+              <span>{item.ward}</span>
+            </Typography>
 
-                <Typography component="span" style={businessDetailStyle} align="left" className="business-detail-container">
-                  <span className="business-detail-label">Trade Name: </span>
-                  <span>{item.trade_name}</span>
-                </Typography>
+            <Typography component="span" style={businessDetailStyle} align="left" className="business-detail-container">
+              <span className="business-detail-label">Trade Name: </span>
+              <span>{item.trade_name}</span>
+            </Typography>
 
-                <Typography component="span" style={businessDetailStyle} align="left" className="business-detail-container">
-                  <span className="business-detail-label">Date Of Issue: </span>
-                  <span>{item.date_of_issue}</span>
-                </Typography>
+            <Typography component="span" style={businessDetailStyle} align="left" className="business-detail-container">
+              <span className="business-detail-label">Date Of Issue: </span>
+              <span>{item.date_of_issue}</span>
+            </Typography>
 
-                <Typography component="span" style={businessDetailStyle} align="left" className="business-detail-container">
-                  <span className="business-detail-label">Neighbourhood: </span>
-                  <span>{item.neighbourhood}</span>
-                </Typography>
-              </Paper>
-            </div>
+            <Typography component="span" style={businessDetailStyle} align="left" className="business-detail-container">
+              <span className="business-detail-label">Neighbourhood: </span>
+              <span>{item.neighbourhood}</span>
+            </Typography>
+          </Paper>
+        </div>
       )
     );
   }
+}
 
 export default BusinessDetail;
