@@ -16,7 +16,7 @@ class Category extends React.Component<any, any>{
     }
 
     showBusinesses = (business_category: String) => {
-        console.log("Business Category: " + business_category);
+        location.href = "/businesslistview?business_category=" + business_category;
     }
 
     async componentDidMount() {
