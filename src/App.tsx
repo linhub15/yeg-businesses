@@ -1,6 +1,6 @@
+//references: https://codeburst.io/getting-started-with-react-router-5c978f70df91
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-
 import './App.css';
 import Home from './components/home.component';
 import Category from './components/category-view.component'
