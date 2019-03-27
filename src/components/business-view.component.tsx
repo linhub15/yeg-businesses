@@ -21,6 +21,7 @@ const _queryString = require('query-string');
 
 const _parsed = _queryString.parse(location.search)
 
+
 // added a ternary conditional operator, so it it will show business: 7267742-001 as default
 // this will change in the future once we have the empty component setup.
 const _id = _parsed.id != null ? _parsed.id : "7267742-001";
@@ -121,7 +122,5 @@ class BusinessDetail extends React.Component<any, any>{
       )
     );
   }
-
-}
 
 export default BusinessDetail;

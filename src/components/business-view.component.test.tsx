@@ -7,3 +7,4 @@ it('renders without crashing', () => {
     ReactDOM.render(<BusinessView />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
+

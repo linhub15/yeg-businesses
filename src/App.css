@@ -1,38 +1,12 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
+.app-footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.category-container{
+.category-container {
   min-width: 200px;
   max-width: 200px;
   min-height: 150px;
@@ -43,11 +17,44 @@
   border: 1px solid black;
 }
 
-.category{
-  text-align:center;
+.category {
+  text-align: center;
   vertical-align: middle;
   font-size: 10px;
-  line-height:150px;
+  line-height: 150px;
+}
+
+.business-map {
+  border: solid 1px black;
+  text-align: center;
+  height: 75px;
+  line-height: 75px;
+  vertical-align: middle;
+  display: inline-block;
+  width: 50%;
+  margin: 20px auto;
+}
+
+.business-detail-label-container {
+  width: 50%;
+  display: inline-block;
+}
+
+.business-detail-label {
+  font-weight: bold;
+  width: 50%;
+  text-align: right;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.business-container {
+  width: 60%;
+  margin: 25px auto;
+}
+
+.paper-container {
+  padding: 10px;
 }
 
 .business-map{
