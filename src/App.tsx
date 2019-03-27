@@ -23,6 +23,7 @@ class App extends Component {
             <Route exact path="/business" component={BusinessView}/>
             <Route exact path="/category" component={Category}/>
             <Route exact path="/businesslistview" component={BusinessListView}/>
+            <Route component={Home} /> {/* invalid link then show Home component */}
           </Switch>
 
         </div>
