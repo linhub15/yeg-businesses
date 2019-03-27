@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import '../App.css';
 import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from 'constants';
-import './core/data.service';
-import { Business, BusinessCategory, DataService } from './core/data.service';
+import '../core/data.service';
+import { Business, BusinessCategory, DataService } from '../core/data.service';
 
 class Category extends React.Component<any, any>{
     constructor(props: any){
