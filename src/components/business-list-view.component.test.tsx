@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Category from './category-view.component';
+import BusinessListView from './business-list-view.component';
 
 it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Category/>, div);
+    ReactDOM.render(<BusinessListView />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
-
