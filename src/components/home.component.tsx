@@ -1,7 +1,8 @@
-import React from 'react';
-import Category from './category-view.component';
-import { makeStyles } from '@material-ui/styles';
-import Button from '@material-ui/core/Button';
+import React from "react";
+import Category from "./category-view.component";
+import { makeStyles } from "@material-ui/styles";
+import Button from "@material-ui/core/Button";
+import SearchBox from "./search-box.component";
 
 const useStyles = makeStyles({
   root: {
@@ -17,6 +18,7 @@ const Home = () => {
   return (
     <div>
       <h1>Edmonton Businesses</h1>
+      <SearchBox />
       <div>
         <Button className={classes.root} href="/business">
           Test: Single Business View
