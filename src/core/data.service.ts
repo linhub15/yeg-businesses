@@ -17,7 +17,7 @@ export interface BusinessCategory {
 }
 export class DataService {
   async fetchBusinesses(): Promise<Business[]> {
-    const url = "https://data.edmonton.ca/resource/3trf-izgx.json";
+    const url = 'https://data.edmonton.ca/resource/3trf-izgx.json';
     return await fetch(url).then(response => {
       return response.json();
     });
@@ -25,7 +25,7 @@ export class DataService {
 
   async fetchBusinessCategories(): Promise<BusinessCategory[]> {
     const url =
-      "https://data.edmonton.ca/resource/3trf-izgx.json?$select=business_category,count(*)&$group=business_category";
+      'https://data.edmonton.ca/resource/3trf-izgx.json?$select=business_category,count(*)&$group=business_category';
     return await fetch(url).then(response => {
       return response.json();
     });
