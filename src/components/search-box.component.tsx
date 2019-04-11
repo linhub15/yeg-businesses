@@ -28,20 +28,20 @@ const styles = {
   },
 };
 
-function CustomizedInputBase(props) {
+function SearchBox(props: any) {
   const { classes } = props;
   return (
     <Paper className={classes.root} elevation={1}>
-      <InputBase className={classes.input} placeholder="Search Google Maps" />
+      <InputBase className={classes.input} placeholder="Search Business" />
       <IconButton className={classes.iconButton} aria-label="Search">
         <SearchIcon />
       </IconButton>
     </Paper>
   );
 }
-CustomizedInputBase.propTypes = {
+SearchBox.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(CustomizedInputBase);
+export default withStyles(styles)(SearchBox);
 
