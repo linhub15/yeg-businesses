@@ -19,7 +19,7 @@ import { URLSearchParams } from 'url';
 // reference: https://www.npmjs.com/package/query-string
 const _queryString = require('query-string');
 
-const _parsed = _queryString.parse(location.search);
+const _parsed = _queryString.parse(window.location.search);
 
 // added a ternary conditional operator, so it it will show business: 7267742-001 as default
 // this will change in the future once we have the empty component setup.
