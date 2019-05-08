@@ -1,20 +1,9 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import '../App.css';
-import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from 'constants';
-import '../core/data.service';
-import { Business, BusinessCategory, DataService } from '../core/data.service';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
+import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import { URLSearchParams } from 'url';
+
+import '../App.css';
+import '../core/data.service';
 
 // reference: https://www.npmjs.com/package/query-string
 const _queryString = require('query-string');
@@ -61,7 +50,7 @@ function BusinessRender(props: any) {
           className="business-detail-container"
         >
           <span className="business-detail-label">Business Category: </span>
-          <span>{props.category != '' ? props.category : 'N/A'}</span>
+          <span>{props.category !== '' ? props.category : 'N/A'}</span>
         </Typography>
         <Typography
           component="span"
@@ -116,7 +105,7 @@ class BusinessListView extends React.Component<any, any> {
   }
 
   render() {
-    const { error, isLoaded, items } = this.state;
+    const { items } = this.state;
     return items.map((business: any) => (
       <BusinessRender
         key={business.externalid}

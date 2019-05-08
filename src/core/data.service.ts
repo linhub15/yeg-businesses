@@ -1,5 +1,7 @@
 export interface Business {
+  address: string;
   business_category: string;
+  business_improvement_area: string;
   count: string | number;
   date_of_issue: string | Date;
   expiry_date: string | Date;
