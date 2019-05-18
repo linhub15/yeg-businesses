@@ -50,8 +50,8 @@ class BusinessDetail extends React.Component<any, any> {
 
     return (
       <div>
-        {items.map((item: Business) => (
-          <div className="business-container" key={_id}>
+        {items.map((item: Business, index: number) => (
+          <div className="business-container" key={index}>
             <h2>{item.trade_name}</h2>
             <Paper elevation={3} className="paper-container">
               <Typography

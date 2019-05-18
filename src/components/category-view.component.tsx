@@ -28,8 +28,9 @@ class Category extends React.Component<any, any> {
     return (
       <div>
         <h2 className="text-center">Categories</h2>
-        {items.map((item: BusinessCategory) => (
+        {items.map((item: BusinessCategory, index: number) => (
           <Button
+            key={index}
             href={`/businesslistview?business_category=${
               item.business_category
             }`}
