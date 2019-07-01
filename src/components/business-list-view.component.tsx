@@ -1,26 +1,25 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "../App.css";
-import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from "constants";
-import "../core/data.service";
-import { Business, BusinessCategory, DataService } from "../core/data.service";
-import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
-import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
-import { URLSearchParams } from "url";
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import '../App.css';
+import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from 'constants';
+import '../core/data.service';
+import { Business, BusinessCategory, DataService } from '../core/data.service';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+import { URLSearchParams } from 'url';
 
 // reference: https://www.npmjs.com/package/query-string
-const _queryString = require("query-string");
+const _queryString = require('query-string');
 
 const _parsed = _queryString.parse(location.search);
-
 
 // added a ternary conditional operator, so it it will show business: 7267742-001 as default
 // this will change in the future once we have the empty component setup.

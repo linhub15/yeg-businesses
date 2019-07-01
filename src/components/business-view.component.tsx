@@ -1,21 +1,21 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "../App.css";
-import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from "constants";
-import "../core/data.service";
-import { Business, BusinessCategory, DataService } from "../core/data.service";
-import PropTypes from "prop-types";
-import { withStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
-import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
-import { URLSearchParams } from "url";
-import GoogleMapReact from "google-map-react";
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import '../App.css';
+import { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } from 'constants';
+import '../core/data.service';
+import { Business, BusinessCategory, DataService } from '../core/data.service';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+import { URLSearchParams } from 'url';
+import GoogleMapReact from 'google-map-react';
 
 // reference: https://www.npmjs.com/package/query-string
 const _queryString = require('query-string');
@@ -64,20 +64,20 @@ class BusinessDetail extends React.Component<any, any> {
       padding: '10px 0',
     };
 
-  return items.map((item: any) => (
+    return items.map((item: any) => (
       <div className="business-container" key={_id}>
         <Paper elevation={3} className="paper-container">
           {/* <Typography component="div" style={businessMapStyle} className="App business-map">
               Business Map Placeholder
                 </Typography> */}
 
-          <div style={{ height: "100vh", width: "100%" }}>
+          <div style={{ height: '100vh', width: '100%' }}>
             {/* reference: https://www.npmjs.com/package/google-map-react
                            https://github.com/google-map-react/old-examples/blob/master/web/flux/components/examples/x_simple/my_great_place.jsx
                            https://github.com/google-map-react/google-map-react */}
             <GoogleMapReact
               bootstrapURLKeys={{
-                key: "AIzaSyBKzknmgwISliuh7-auL_JeZilit1mVYMI"
+                key: 'AIzaSyBKzknmgwISliuh7-auL_JeZilit1mVYMI',
               }}
               defaultCenter={{ lng: +item.longitude, lat: +item.latitude }}
               defaultZoom={15}
@@ -195,7 +195,7 @@ class BusinessDetail extends React.Component<any, any> {
           </Typography>
         </Paper>
       </div>
-    );
+    ));
   }
 }
 
