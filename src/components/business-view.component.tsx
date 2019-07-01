@@ -40,13 +40,6 @@ class BusinessDetail extends React.Component<any, any> {
     const { items } = this.state;
 
     // inline styles
-    const businessMapStyle = {
-      margin: '0 auto',
-      marginTop: '10px',
-      width: '50%',
-      border: '1px solid black',
-    };
-
     const businessDetailStyle = {
       width: '48%',
       display: 'inline-block',
