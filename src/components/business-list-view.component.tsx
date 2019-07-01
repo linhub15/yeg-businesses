@@ -21,21 +21,22 @@ const _queryString = require("query-string");
 
 const _parsed = _queryString.parse(location.search);
 
+
 // added a ternary conditional operator, so it it will show business: 7267742-001 as default
 // this will change in the future once we have the empty component setup.
 const _category =
   _parsed.business_category != null
-    ? "?business_category=" + _parsed.business_category
-    : "";
+    ? '?business_category=' + _parsed.business_category
+    : '';
 
 /*
     Functional component that will render each business for BusinessListView component
 */
 function BusinessRender(props: any) {
   const businessDetailStyle = {
-    width: "100%",
-    display: "inline-block",
-    padding: "10px 0"
+    width: '100%',
+    display: 'inline-block',
+    padding: '10px 0',
   };
 
   return (
@@ -61,7 +62,7 @@ function BusinessRender(props: any) {
           className="business-detail-container"
         >
           <span className="business-detail-label">Business Category: </span>
-          <span>{props.category != "" ? props.category : "N/A"}</span>
+          <span>{props.category !== '' ? props.category : 'N/A'}</span>
         </Typography>
         <Typography
           component="span"
@@ -85,22 +86,22 @@ class BusinessListView extends React.Component<any, any> {
     this.state = {
       error: null,
       isLoaded: true,
-      items: []
+      items: [],
     };
   }
 
   showBusiness(business_id: any) {
-    location.href = "/business?id=" + business_id;
+    window.location.href = '/business?id=' + business_id;
   }
 
   async componentDidMount() {
-    fetch("https://data.edmonton.ca/resource/qhi4-bdpu.json" + _category)
+    fetch('https://data.edmonton.ca/resource/qhi4-bdpu.json' + _category)
       .then(res => res.json())
       .then(
         result => {
           this.setState({
             isLoaded: true,
-            items: result
+            items: result,
           });
         },
         // Note: it's important to handle errors here
@@ -109,14 +110,14 @@ class BusinessListView extends React.Component<any, any> {
         error => {
           this.setState({
             isLoaded: true,
-            error
+            error,
           });
         }
       );
   }
 
   render() {
-    const { error, isLoaded, items } = this.state;
+    const { items } = this.state;
     return items.map((business: any) => (
       <BusinessRender
         key={business.externalid}

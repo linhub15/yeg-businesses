@@ -6,23 +6,6 @@
   text-align: center;
   color: white;
 }
-.category-container {
-  min-width: 200px;
-  max-width: 200px;
-  min-height: 150px;
-  max-height: 150px;
-  display: inline-block;
-  margin: 25px 25px;
-  vertical-align: middle;
-  border: 1px solid black;
-}
-
-.category {
-  text-align: center;
-  vertical-align: middle;
-  font-size: 10px;
-  line-height: 150px;
-}
 
 .business-map {
   border: solid 1px black;
@@ -57,7 +40,9 @@
   padding: 10px;
 }
 
-.business-map {
+
+.business-map{
+
   border: solid 1px black;
   text-align: center;
   height: 75px;
@@ -82,14 +67,35 @@
   font-weight: bold;
   width: 50%;
   text-align: right;
+=======
+  width:50%;
+  margin: 20px auto;
+}
+
+.business-detail-container{
+  width: 50%;
+  display:inline-block;
+}
+
+.business-detail-label-container{
+    width: 50%;
+    display:inline-block;
+}
+
+.business-detail-label{
+  font-weight:bold;
+  width: 50%;
+  text-align:right;
   display: inline-block;
   margin-right: 5px;
 }
+
 
 .business-container {
   width: 60%;
   margin: 25px auto;
 }
+
 
 .paper-container {
   padding: 10px;
@@ -116,4 +122,8 @@
   left: -6px;
   border: 10px solid transparent;
   border-top: 17px solid red;
+}
+
+.paper-container{
+  padding: 10px;
 }

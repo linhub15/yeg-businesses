@@ -1,14 +1,14 @@
-import { Business, DataService } from "./data.service";
+import { Business, DataService } from './data.service';
 
-describe("DataService", () => {
+describe('DataService', () => {
   const dataService = new DataService();
 
-  test("creates", () => {
+  test('creates', () => {
     expect(dataService).toBeTruthy();
   });
 
-  describe("fetchBusinesses()", () => {
-    it("returns businesses", async () => {
+  describe('fetchBusinesses()', () => {
+    it('returns businesses', async () => {
       const businesses = await dataService.fetchBusinesses().then(result => {
         return result;
       });
@@ -16,8 +16,8 @@ describe("DataService", () => {
     });
   });
 
-  describe("fetch business categories", () => {
-    it("returns categories", async () => {
+  describe('fetch business categories', () => {
+    it('returns categories', async () => {
       const categories = await dataService
         .fetchBusinessCategories()
         .then(result => {
@@ -27,10 +27,10 @@ describe("DataService", () => {
     });
   });
 
-  describe("fetch business by id", () => {
-    it("returns a single business", async () => {
+  describe('fetch business by id', () => {
+    it('returns a single business', async () => {
       const business = await dataService
-        .fetchBusiness("295961277-002")
+        .fetchBusiness('295961277-002')
         .then((result: Business) => {
           return result;
         });

@@ -18,13 +18,13 @@ import { URLSearchParams } from "url";
 import GoogleMapReact from "google-map-react";
 
 // reference: https://www.npmjs.com/package/query-string
-const _queryString = require("query-string");
+const _queryString = require('query-string');
 
-const _parsed = _queryString.parse(location.search);
+const _parsed = _queryString.parse(window.location.search);
 
 // added a ternary conditional operator, so it it will show business: 7267742-001 as default
 // this will change in the future once we have the empty component setup.
-const _id = _parsed.id != null ? _parsed.id : "7267742-001";
+const _id = _parsed.id != null ? _parsed.id : '7267742-001';
 
 function Marker(props: any) {
   return <div className="marker">{props.text}</div>;
@@ -37,7 +37,7 @@ class BusinessDetail extends React.Component<any, any> {
     this.state = {
       error: null,
       isLoaded: true,
-      items: []
+      items: [],
     };
   }
 
@@ -48,23 +48,23 @@ class BusinessDetail extends React.Component<any, any> {
   }
 
   render() {
-    const { error, isLoaded, items } = this.state;
+    const { items } = this.state;
 
     // inline styles
     const businessMapStyle = {
-      margin: "0 auto",
-      marginTop: "10px",
-      width: "50%",
-      border: "1px solid black"
+      margin: '0 auto',
+      marginTop: '10px',
+      width: '50%',
+      border: '1px solid black',
     };
 
     const businessDetailStyle = {
-      width: "48%",
-      display: "inline-block",
-      padding: "10px 0"
+      width: '48%',
+      display: 'inline-block',
+      padding: '10px 0',
     };
 
-    return items.map((item: any) => (
+  return items.map((item: any) => (
       <div className="business-container" key={_id}>
         <Paper elevation={3} className="paper-container">
           {/* <Typography component="div" style={businessMapStyle} className="App business-map">
@@ -195,7 +195,7 @@ class BusinessDetail extends React.Component<any, any> {
           </Typography>
         </Paper>
       </div>
-    ));
+    );
   }
 }
 
