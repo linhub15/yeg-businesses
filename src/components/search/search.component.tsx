@@ -49,7 +49,7 @@ class Search extends React.Component<{}, SearchState> {
     };
     const fuse = new Fuse(businesses, options);
     const results = fuse.search(value);
-    return results.slice(0, 5);
+    return results.slice(0, 5) as Business[];
   }
 
   render() {
