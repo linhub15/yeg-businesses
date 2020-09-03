@@ -2,6 +2,7 @@
   "name": "yeg-businesses",
   "version": "0.1.0",
   "private": true,
+  "homepage": "yeg-businesses",
   "dependencies": {
     "@material-ui/core": "^3.9.3",
     "@material-ui/icons": "^3.0.2",
@@ -21,7 +22,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "cp -r build docs",
+    "postbuild": "rm -rf ./docs && cp -r build docs",
     "test": "react-scripts test"
   },
   "eslintConfig": {
