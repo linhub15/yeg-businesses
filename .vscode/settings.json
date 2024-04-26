@@ -1,7 +1,5 @@
 {
-  "editor.formatOnSave": true,
-  "editor.tabSize": 2,
-  "[html]": {
-    "editor.formatOnSave": false
-  }
+  "deno.enable": true,
+  "deno.lint": true,
+  "editor.defaultFormatter": "denoland.vscode-deno"
 }
